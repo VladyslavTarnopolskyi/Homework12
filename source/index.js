@@ -1,5 +1,5 @@
 var angular = require('angular');
-var model = angular.module('todoApp', ['ngMaterial']);
+var model = angular.module('todoApp', []);
 model.controller('todoController', function($scope) {
     $scope.taskItem = localStorage.getItem('taskItems')? JSON.parse(localStorage.getItem('taskItems')) : [];
     $scope.saveToLocal = function () {
