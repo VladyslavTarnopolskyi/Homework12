@@ -1,5 +1,5 @@
 var angular = require('angular');
-var model = angular.module('todoApp', []);
+var model = angular.module('todoApp', ['ngMaterial']);
 model.controller('todoController', function($scope) {
     $scope.taskItem = localStorage.getItem('taskItems')? JSON.parse(localStorage.getItem('taskItems')) : [];
     $scope.saveToLocal = function () {
@@ -40,10 +40,10 @@ model.controller('todoController', function($scope) {
             $scope.popup = false;
         };
     };
-    $scope.sortableOpt = {
-        dragEnd: function () {
-            $scope.saveToLocal();
-        }
-    };
+    // $scope.sortableOpt = {
+    //     dragEnd: function () {
+    //         $scope.saveToLocal();
+    //     }
+    // };
     $scope.updateSelected();
 });

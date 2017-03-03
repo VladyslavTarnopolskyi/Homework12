@@ -1,4 +1,89 @@
+/*!* reset browser styles *!*/
+/*html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,*/
+/*table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,*/
+/*figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,*/
+/*time, mark, audio, video {*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*border: 0;*/
+/*font-size: 100%;*/
+/*vertical-align: baseline;*/
+/*}*/
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {*/
+/*display: block;*/
+/*}*/
+/*body {*/
+/*line-height: 1.2;*/
+/*}*/
+/*ol {*/
+/*padding-left: 1.4em;*/
+/*list-style: decimal;*/
+/*}*/
+/*ul {*/
+/*padding-left: 1.4em;*/
+/*list-style: square;*/
+/*}*/
+/*table {*/
+/*border-collapse: collapse;*/
+/*border-spacing: 0;*/
+/*}*/
+/*!* end reset browser styles *!*/
+
+body{
+    width: 720px;
+    margin: 0 auto;
+}
 .completed-true{
-    color: gray;
+    color: lightgray;
     text-decoration: line-through;
+}
+input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    left: 0;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    font-size: 20px;
+    border-bottom: 1px solid green;
+    height: 40px;
+    margin-top: 10px;
+}
+li span{
+    padding-left: 15px;
+}
+li:hover{
+    border-bottom: 1px solid blue;
+}
+.button{
+    float: right;
+}
+/*  popup  */
+#popup{
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#popup button{
+    text-align: center;
+}
+#edit {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
