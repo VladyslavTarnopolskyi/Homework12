@@ -15,8 +15,8 @@
     <h1>To Do List on Angular</h1>
     <div ng-app="todoApp" ng-controller="todoController">
         <form ng-submit="add()">
-            <input ng-model="title" placeholder="Write todo..."><button class="add-btn waves-effect waves-light btn">Add</button>
-            <input type="search" placeholder="Search" ng-model="search">
+            <input ng-model="title" placeholder="Write todo..." tabindex="1"><button class="add-btn waves-effect waves-light btn" tabindex="2">Add</button>
+            <input type="search" placeholder="Search" ng-model="search" tabindex="3">
         </form>
         <div class="task">Done Item: {{doneTodo}}{{updateSelected()}}</div>
         <div class="task">Not Done Item: {{allTodo}}</div>
@@ -30,10 +30,10 @@
         <ul as-sortable="sortableOpt" ng-model="taskItem">
             <li ng-repeat="item in taskItem | filter:search track by $index" as-sortable-item>
                 <div as-sortable-item-handle>
-                    <input type="checkbox" ng-model="item.done" ng-click="saveToLocal()"/>
+                    <input type="checkbox" ng-model="item.done" ng-click="saveToLocal()" tabindex="4"/>
                     <span class="completed-{{item.done}}">{{ item.name }}</span>
-                    <button ng-click="edit()" class="button waves-effect waves-light btn">Edit</button>
-                    <button ng-click="delete()" class="button waves-effect waves-light btn">x</button>
+                    <button ng-click="edit()" class="button waves-effect waves-light btn" tabindex="4">Edit</button>
+                    <button ng-click="delete()" class="button waves-effect waves-light btn" tabindex="4">x</button>
                 </div>
             </li>
         </ul>
