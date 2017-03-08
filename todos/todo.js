@@ -24,8 +24,11 @@ router.post('/todo', (req, res, next) => {
         })
         .catch(next);
 });
-router.delete('/todo/:item', (req, res, next) => {
-    Todo.remove({ item: req.params.item}, function (err) {
+router.delete('/todo/:todo_id', (req, res, next) => {
+    Todo.remove({
+        _id: req.params.todo_id
+    },
+        function (err) {
         if (err) {
             res.send(err);
         }

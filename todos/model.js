@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 
 const todoSchema = new mongoose.Schema({
-    item: String
+    item: String,
+    done: Boolean
 });
 
 module.exports = mongoose.model('Todo', todoSchema);
