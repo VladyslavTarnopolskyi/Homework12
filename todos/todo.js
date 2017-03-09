@@ -24,9 +24,10 @@ router.post('/todo', (req, res, next) => {
         })
         .catch(next);
 });
-router.delete('/todo/:todo_id', (req, res, next) => {
+router.delete('/todo/:item', (req, res, next) => {
+    console.log(req.params.item);
     Todo.remove({
-        _id: req.params.todo_id
+        item: req.params.item
     },
         function (err) {
         if (err) {
@@ -40,8 +41,6 @@ router.delete('/todo/:todo_id', (req, res, next) => {
 
 router.put('/todo/:todo', (req, res) =>{
     var todoItem = req.params.todo;
-    console.log(req.params);
-    console.log(req.body);
     Todo.update({
         item: todoItem
     },{
